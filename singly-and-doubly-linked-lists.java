@@ -45,3 +45,27 @@ public boolean isEmpty() {
 public void add(T elem) {
     addLast(elem);
 }
+
+// add an element to the beginning of this linked list, O(1)
+public void addFirst(T elem) {
+    // the linked list is empty
+    if (isEmpty()) {
+        head = tail = new Node <T> (elem, null, null);
+    } else {
+        head.prev = new Node <T> (elem, null, head);
+        head = head.prev;
+    }
+    size++;
+}
+
+// add a node to the tail of the linked list, O(1)
+public void addLast(T elem) {
+    //the linked list is empty
+    if (isEmpty()) {
+        head = tail = new Node <T> (elem, null, null);
+    } else {
+        tail.next = new Node <T> ( elem, tail, null);
+        tail = tail.next;
+    }
+    size++;
+}
