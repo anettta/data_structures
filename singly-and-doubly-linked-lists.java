@@ -30,3 +30,18 @@ public void clear() {
     head = tail = trav = null;
     size = 0;
 }
+
+// return the size of this linked list
+public int size() {
+    return size;
+}
+
+// is this linked list empty?
+public boolean isEmpty() {
+    return size() == 0;
+}
+
+// add an element to the tail of the linked list, O(1)
+public void add(T elem) {
+    addLast(elem);
+}
