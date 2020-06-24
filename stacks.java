@@ -14,3 +14,22 @@ public Stack (T firstElem) {
 public int size() {
     return list.size();
 }
+
+// check if the stack is empty
+public boolean isEmpty() {
+    return size() == 0;
+}
+
+// push an element on the stack
+public void push(T elem) {
+    list.addLast(elem);
+}
+
+// pop an element off the stack
+// throws an error if the stack is empty
+public T pop() {
+    if (isEmpty())
+    throw new java.util.EmptyStackException();
+    return list.removeLast();
+}
+
