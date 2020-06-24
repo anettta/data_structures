@@ -16,3 +16,17 @@ private class Node <T> {
         return data.toString();
     }
 }
+
+// empty this linked list, O(n)
+
+public void clear() {
+    Node <T> trav = head;
+    while(trav != null) {
+        Node <T> next = trav.next;
+        trav.prev = trav.next = null;
+        trav.data = null;
+        trav = next;
+    }
+    head = tail = trav = null;
+    size = 0;
+}
