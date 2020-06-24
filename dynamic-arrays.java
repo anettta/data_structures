@@ -60,3 +60,13 @@ public boolean remove(Object obj) {
     return false;
 }
 
+public int indexOf(Object obj) {
+    for (int i = 0; i < len; i++)
+    if (arr[i].equals(obj))
+    return i;
+    return -1;
+}
+
+public boolean contains(Object obj) {
+    return indexOf(obj) != -1;
+}
