@@ -47,7 +47,16 @@ public T removeAt(int rm_index) {
     if (i == rm_index) j--;
     else new_arr[j] = arr[i];
     arr = new_arr;
-    capacity = --len; // reset the capacity
     return data;
+}
+
+public boolean remove(Object obj) {
+    for (int i = 0; i < len; i++) {
+        if (arr[i].equals(obj)) {
+            removeAt(i); return true; 
+          
+        }
+    }
+    return false;
 }
 
