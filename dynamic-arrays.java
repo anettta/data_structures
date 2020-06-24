@@ -36,7 +36,18 @@ public void add(T elem) {
         arr = new_arr; // arr has extra nulls padded
     }
     arr[len++] = elem;
+}
 
-
+// removes the element at the specified index in this list
+public T removeAt(int rm_index) {
+    if (rm_index >= len && rm_index < 0) throw new IndexOutOfBoundsException();
+    T data = arr[rm_index];
+    T[] new_arr = (T[]) new Object[len-1]; // new array
+    for (int i=0; j=0; i<len; i++; j++)
+    if (i == rm_index) j--;
+    else new_arr[j] = arr[i];
+    arr = new_arr;
+    capacity = --len; // reset the capacity
+    return data;
 }
 
