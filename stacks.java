@@ -33,3 +33,20 @@ public T pop() {
     return list.removeLast();
 }
 
+
+// peek the top of the stack without removing an element
+// throws an exception if the stack is empty
+public T peek() {
+    if (isEmpty())
+    throw new java.util.EmptyStackException();
+    return list.peekLast();
+}
+
+// allow users to iterate through the stack using an iterator
+@Override public java.util.Iterator <T> iterator () {
+    return list.iterator();
+}
+
+}
+
+
